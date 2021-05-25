@@ -9,15 +9,13 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
-            MoebiusPlot(2000000);
+            MoebiusPlot(100000);
         }
 
         static void MoebiusPlot(ulong limit)
         {
             Plot plt = new ScottPlot.Plot(600, 400);
 
-            // generate data
-            // double[] xAxis = new double[limit];
             double[] moebiusCoord = new double[limit];
             double[] positiveBound = new double[limit];
             double[] negativeBound = new double[limit];
@@ -35,8 +33,6 @@ namespace ConsoleApp1
             plt.AddSignal(positiveBound);
             plt.AddSignal(negativeBound);
             plt.SaveFig($"plot_moebius_{limit}.png");
-
-
         }
     }
 }
