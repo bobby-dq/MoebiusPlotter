@@ -9,29 +9,7 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
-            //ScottPlotCookBook();
-            MoebiusPlot(10000000);
-        }
-
-        static void ScottPlotCookBook()
-        {
-            var plt = new ScottPlot.Plot(600, 400);
-
-            // sample data
-            double[] xs = DataGen.Consecutive(51);
-            double[] sin = DataGen.Sin(51);
-            double[] cos = DataGen.Cos(51);
-
-            // plot the data
-            plt.AddScatter(xs, sin);
-            plt.AddScatter(xs, cos);
-
-            // customize the axis labels
-            plt.Title("ScottPlot Quickstart");
-            plt.XLabel("Horizontal Axis");
-            plt.YLabel("Vertical Axis");
-
-            plt.SaveFig("quickstart_scatter2.png");
+            MoebiusPlot(2000000);
         }
 
         static void MoebiusPlot(ulong limit)
